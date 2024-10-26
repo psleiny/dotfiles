@@ -97,7 +97,12 @@ in
 		wl-clipboard
 		git
 		fastfetch
+		nodejs
+		pnpm
+		yq
   ];
+
+	services.upower.enable = true;
 
   programs.thunar.enable = true;
   programs.xfconf.enable = true;

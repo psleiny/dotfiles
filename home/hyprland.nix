@@ -27,6 +27,13 @@
 			border_size = 0;
 		};
 
+		decoration = {
+			drop_shadow = true;
+			shadow_range = 32;
+			"col.shadow" = "rgba(11111132)";
+			shadow_render_power = 2;
+		};
+
 		plugin = {
 			hyprbars = {
 				bar_height = 40;
@@ -47,10 +54,10 @@
 			"SUPER SHIFT, K, swapwindow, u"
 			"SUPER SHIFT, L, swapwindow, r"
 
-			"SUPER CTRL, H, resizeactive, 10 0"
+			"SUPER CTRL, H, resizeactive, -10 0"
 			"SUPER CTRL, J, resizeactive, 0 10"
 			"SUPER CTRL, K, resizeactive, 0 -10"
-			"SUPER CTRL, L, resizeactive, -10 0"
+			"SUPER CTRL, L, resizeactive, 10 0"
 
 			"SUPER, return, fullscreen, 1"
 			"SUPER SHIFT, return, fullscreen, 0"

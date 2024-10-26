@@ -9,7 +9,7 @@
     inputs.ags.homeManagerModules.default
     ./hyprland.nix
     ./firefox.nix
-	./shell.nix
+		./shell.nix
   ];
 
   nixpkgs = {
@@ -30,6 +30,8 @@
   };
 
   programs.home-manager.enable = true;
+	
+	programs.ags.enable = true;
 
   programs.alacritty.enable = true;
   programs.wofi.enable = true;
@@ -39,4 +41,5 @@
   home.stateVersion = "24.05";
 
   xdg.configFile."nvim".source = ./nvim;
+  home.file."colors.yaml".source = ../colors.yaml;
 }
