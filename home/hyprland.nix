@@ -31,7 +31,7 @@
 			hyprbars = {
 				bar_height = 40;
 				bar_color = "rgb(${config.lib.stylix.colors.base00})";
-				"col.text" = "rgb(${config.lib.stylix.colors.base05})";
+				"col.text" = "rgb(${config.lib.stylix.colors.base03})";
 				bar_text_font = "JetBrainsMono Nerd Font";
 			};
 		};
@@ -110,6 +110,7 @@
 			"suppressevent maximize, class:.*"
 			"nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
 		  "plugin:hyprbars:bar_color 0xff${config.lib.stylix.colors.base01}, focus:1"
+		  "plugin:hyprbars:title_color 0xff${config.lib.stylix.colors.base05}, focus:1"
 		];
 	};
 

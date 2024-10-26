@@ -96,6 +96,7 @@ in
 		cargo
 		wl-clipboard
 		git
+		fastfetch
   ];
 
   programs.thunar.enable = true;
