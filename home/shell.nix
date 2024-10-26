@@ -15,7 +15,7 @@
 			v = "nvim";
 			vi = "nvim";
 			vim = "nvim";
-			rbs = "cd ~/nixos; git add .; sudo nixos-rebuild switch --flake .";
+			rbs = "cd ~/dotfiles; git add .; sudo nixos-rebuild switch --flake .";
 		};
 
 		initExtra = ''

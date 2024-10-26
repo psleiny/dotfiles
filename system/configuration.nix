@@ -117,10 +117,10 @@ in
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [];
 
-	hardware.opengl = {
+	hardware.graphics = {
     package = pkgs-hyprland.mesa.drivers;
 
-    driSupport32Bit = true;
+    enable32Bit = true;
     package32 = pkgs-hyprland.pkgsi686Linux.mesa.drivers;
   };
 
