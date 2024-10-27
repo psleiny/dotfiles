@@ -1,7 +1,12 @@
-local handle = io.popen("yq 'if .palette then .palette else . end' ~/colors.yaml")
-local result = handle:read("*a")
-handle:close()
-local table = vim.json.decode(result)
+-- Thanks again, Stack Overflow!
+local function readAll(file)
+	local f = assert(io.open(file, "rb"))
+	local content = f:read("*all")
+	f:close()
+	return content
+end
+
+local table = vim.json.decode(readAll(os.getenv("HOME") .. "/colors.json"))
 local new = {}
 for key, value in pairs(table) do
 	new[key] = "#" .. value

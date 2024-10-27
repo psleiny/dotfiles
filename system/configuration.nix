@@ -100,6 +100,9 @@ in
 		nodejs
 		pnpm
 		yq
+		xfce.ristretto
+		godot_4
+		thunderbird
   ];
 
 	services.upower.enable = true;
