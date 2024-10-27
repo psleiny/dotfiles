@@ -53,4 +53,20 @@
 	};
 	
 	programs.eza.enable = true;
+
+	programs.tmux = {
+		enable = true;
+		mouse = true;
+		shortcut = "a";
+		baseIndex = 1;
+		escapeTime = 0;
+		terminal = "tmux-256color";
+		extraConfig = /* tmux */ ''
+			set -g default-terminal "tmux-256color"
+			set -ag terminal-overrides ",xterm-256color:RGB"
+		'';
+		plugins = with pkgs.tmuxPlugins; [
+			vim-tmux-navigator
+		];
+	};
 }

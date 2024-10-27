@@ -103,8 +103,21 @@ in
 		xfce.ristretto
 		godot_4
 		thunderbird
-# very temporary
-		wofi
+		grim
+		slurp
+		hyprpicker
+		wofi-emoji
+		(pkgs.writeShellScriptBin "powermenu" ''
+			echo -e "Shut Down\nRestart\nSleep\nLock\nLog Out" | wofi --show dmenu | while read option; do
+	 	   case "$option" in
+	       "Shut Down") poweroff ;;
+	       "Restart") reboot ;;
+	       "Sleep") systemctl suspend ;;
+	       "Lock") hyprlock ;;
+	       "Log Out") hyprctl dispatch exit ;;
+	 	   esac
+			done
+		'')
   ];
 
 	services.upower.enable = true;

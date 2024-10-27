@@ -38,7 +38,14 @@
 		configDir = ./ags;
 	};
 
-  programs.alacritty.enable = true;
+  programs.alacritty = {
+		enable = true;
+		settings = {
+			env = {
+				TERM = "xterm-256color";
+			};
+		};
+	};
 
   systemd.user.startServices = "sd-switch";
 

@@ -72,11 +72,11 @@
 
 			"SUPER, Q, exec, alacritty"
 			"SUPER, C, killactive,"
-			"SUPER, M, exit,"
+			"SUPER, M, exec, powermenu"
+			"SUPER SHIFT, M, exit,"
 			"SUPER, E, exec, thunar"
 			"SUPER, V, togglefloating,"
 			"SUPER, R, exec, wofi --show drun"
-			"SUPER, P, pseudo,"
 			"SUPER, S, togglesplit,"
 			"SUPER, W, exec, firefox"
 
@@ -99,6 +99,10 @@
 			"SUPER SHIFT, 7, movetoworkspace, 7"
 			"SUPER SHIFT, 8, movetoworkspace, 8"
 			"SUPER SHIFT, 9, movetoworkspace, 9"
+			
+			'', Print, exec, grim -g "$(slurp)"''
+			"SUPER, P, exec, hyprpicker -a"
+			"SUPER, A, exec, wofi-emoji"
 		];
 
 		bindm = [

@@ -55,15 +55,25 @@
 
 .tab-content {
   margin-inline: auto;
+	max-width: 100%;
 }
 
 .tab-text {
   margin-bottom: 2px !important;
   margin-left: 4px !important;
+	text-overflow: ellipsis;
+	overflow: hidden;
   
   &:not([selected]) {
     color: #${config.lib.stylix.colors.base03};
+		&:-moz-window-inactive {
+    	color: #${config.lib.stylix.colors.base02};
+		}
   }
+
+	&:-moz-window-inactive {
+		color: #${config.lib.stylix.colors.base03}
+	}
 }
 			'';
 		};
