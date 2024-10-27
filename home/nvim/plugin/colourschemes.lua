@@ -1,4 +1,4 @@
-local handle = io.popen("cat ~/colors.yaml | yq")
+local handle = io.popen("yq 'if .palette then .palette else . end' ~/colors.yaml")
 local result = handle:read("*a")
 handle:close()
 local table = vim.json.decode(result)

@@ -5,6 +5,12 @@ in
 {
   stylix.enable = true;
 
+	stylix.cursor = {
+		name = "graphite-dark";
+		package = pkgs.graphite-cursors;
+		size = 24;
+	};
+
   stylix.image = ../wallpaper.png;
 
   stylix.base16Scheme = ../colors.yaml;
