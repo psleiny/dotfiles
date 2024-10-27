@@ -32,7 +32,10 @@
 
   programs.home-manager.enable = true;
 	
-	programs.ags.enable = true;
+	programs.ags = {
+		enable = true;
+		configDir = ./ags;
+	};
 
   programs.alacritty.enable = true;
 

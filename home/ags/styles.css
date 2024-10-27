@@ -1,0 +1,74 @@
+* {
+	font-family: JetBrainsMono Nerd Font;
+	font-weight: normal;
+	color: @base05;
+}
+
+.bar {
+	background: @base00;
+}
+
+.center-box {
+	padding: 8px;
+}
+
+.workspace,
+.window {
+	background: none;
+}
+
+.workspace:first-child {
+	padding-top: 8px;
+}
+
+.workspace.active>label,
+.window.active>label {
+	color: @base05;
+}
+
+.workspace.full>label {
+	color: @base04;
+}
+
+.window.inactive>label,
+.workspace.empty>label {
+	color: @base03;
+}
+
+.workspace:hover,
+.window:hover {
+	opacity: 0.5;
+}
+
+.battery.critical {
+	color: @base08;
+}
+
+.battery.low {
+	color: @base0A;
+}
+
+.battery.good {
+	color: @base0B;
+}
+
+.date-time {
+	padding-bottom: 8px;
+}
+
+.percent-labels {
+	margin-top: 16px;
+}
+
+.percent-label.dark {
+	color: @base01;
+}
+
+.percent-bar,
+.percent-bar * {
+	border-radius: 0px;
+}
+
+.percent-bar .filled {
+	background: @base05;
+}
