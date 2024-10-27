@@ -6,7 +6,10 @@
 		hyprbars
 	];
 	wayland.windowManager.hyprland.settings = {
-		exec-once = "hyprpaper";
+		exec-once = [
+		  "hyprpaper"
+			"ags"
+		];
 
 		monitor = ",preferred,auto,1";
 
@@ -25,6 +28,7 @@
 
 		general = {
 			border_size = 0;
+			gaps_out = 10;
 		};
 
 		decoration = {
