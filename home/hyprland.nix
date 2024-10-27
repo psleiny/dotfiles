@@ -31,6 +31,10 @@
 			gaps_out = 10;
 		};
 
+		dwindle = {
+			preserve_split = true;
+		};
+
 		decoration = {
 			drop_shadow = true;
 			shadow_range = 32;
@@ -113,6 +117,7 @@
 
 		windowrule = [
 			"workspace 1, ^firefox$"
+			"plugin:hyprbars:nobar, ^firefox$"
 			"workspace 2, ^Alacritty$"
 			"workspace 3, ^org.godotengine."
 		];

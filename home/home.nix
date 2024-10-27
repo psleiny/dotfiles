@@ -8,6 +8,7 @@
   imports = [
     inputs.ags.homeManagerModules.default
     ./hyprland.nix
+		./hyprlock.nix
     ./firefox.nix
 		./shell.nix
 		./wofi.nix
