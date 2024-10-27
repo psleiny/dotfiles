@@ -103,6 +103,8 @@ in
 		xfce.ristretto
 		godot_4
 		thunderbird
+# very temporary
+		wofi
   ];
 
 	services.upower.enable = true;

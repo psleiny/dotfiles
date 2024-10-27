@@ -10,6 +10,7 @@
     ./hyprland.nix
     ./firefox.nix
 		./shell.nix
+		./wofi.nix
   ];
 
   nixpkgs = {
@@ -34,7 +35,6 @@
 	programs.ags.enable = true;
 
   programs.alacritty.enable = true;
-  programs.wofi.enable = true;
 
   systemd.user.startServices = "sd-switch";
 
