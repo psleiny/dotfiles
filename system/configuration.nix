@@ -101,6 +101,7 @@ in
 		pnpm
 		yq
 		xfce.ristretto
+		xfce.mousepad
 		godot_4
 		thunderbird
 		grim

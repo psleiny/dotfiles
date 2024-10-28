@@ -178,12 +178,12 @@ function Percent(percent, icon) {
   });
 
   const percentLabel = Widget.Label({
-    className: `percent-label ${percent > 0.5 ? "dark" : ""}`,
+    className: `percent-label ${Math.round(percent * 100) > 49 ? "dark" : ""}`,
     label: (percent * 100).toFixed(0),
   });
 
   const iconLabel = Widget.Label({
-    className: `percent-label ${percent > 0.6 ? "dark" : ""}`,
+    className: `percent-label ${Math.round(percent * 100) > 59 ? "dark" : ""}`,
     label: icon,
   });
 
