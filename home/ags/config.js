@@ -35,7 +35,7 @@ function Bar(name, monitor) {
                 (self.class_name = `${
                   hyprland.active.workspace.id === i + 1
                     ? "active"
-                    : hyprland.workspaces[i]?.windows > 0
+                    : hyprland.getWorkspace(i + 1)?.windows > 0
                       ? "full"
                       : "empty"
                 } workspace`),

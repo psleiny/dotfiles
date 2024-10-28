@@ -121,6 +121,10 @@ in
 		'')
   ];
 
+  virtualisation.virtualbox.host.enable = true;
+	virtualisation.virtualbox.host.enableExtensionPack = true;
+  users.extraGroups.vboxusers.members = [ "remy" ];
+
 	services.upower.enable = true;
 
   programs.thunar.enable = true;
