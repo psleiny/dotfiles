@@ -69,6 +69,10 @@
 	border-radius: 0px;
 }
 
+.percent-bar .empty {
+	background: @base01;
+}
+
 .percent-bar .filled {
 	background: @base05;
 }

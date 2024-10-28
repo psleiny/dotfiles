@@ -11,7 +11,7 @@
 			};
 
 			userChrome = /* css */ ''
-.titlebar-buttonbox-container, #alltabs-button, #tabbrowser-arrowscrollbox-periphery, .tab-close-button, .tab-background, .titlebar-spacer, .tabbrowser-tab:not([fadein]) {
+.titlebar-buttonbox-container, #alltabs-button, #tabbrowser-arrowscrollbox-periphery, .tab-close-button, .tab-background, .titlebar-spacer, .tabbrowser-tab:not([fadein]), .tab-icon-stack {
   display: none;
 }
 
@@ -51,6 +51,12 @@
   margin: 0 !important;
   flex: 1 !important;
   max-width: none !important;
+	opacity: 1;
+	transition: opacity 0.5s ease;
+
+	&:hover {
+		opacity: 0.5;
+	}
 }
 
 .tab-content {

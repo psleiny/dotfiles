@@ -211,8 +211,19 @@ function Percent(percent, icon) {
 }
 
 let previousTimeout = 0;
+let previousVolume;
+let previousMute;
+let previousVolumeMic;
+let previousMuteMic;
 
 audio.connect("speaker-changed", (audio) => {
+  if (
+    audio.speaker.volume === previousVolume &&
+    audio.speaker.is_muted === previousMute
+  )
+    return;
+  previousVolume = audio.speaker.volume;
+  previousMute = audio.speaker.is_muted;
   if (App.getWindow("percent") != null) {
     App.removeWindow("percent");
     GLib.source_remove(previousTimeout);
@@ -224,6 +235,13 @@ audio.connect("speaker-changed", (audio) => {
 });
 
 audio.connect("microphone-changed", (audio) => {
+  if (
+    audio.microphone.volume === previousVolumeMic &&
+    audio.microphone.is_muted === previousMuteMic
+  )
+    return;
+  previousVolumeMic = audio.microphone.volume;
+  previousMuteMic = audio.microphone.is_muted;
   if (App.getWindow("percent") != null) {
     App.removeWindow("percent");
     GLib.source_remove(previousTimeout);
