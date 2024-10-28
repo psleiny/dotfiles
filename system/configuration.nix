@@ -108,7 +108,7 @@ in
 		hyprpicker
 		wofi-emoji
 		(pkgs.writeShellScriptBin "powermenu" ''
-			echo -e "Shut Down\nRestart\nSleep\nLock\nLog Out" | wofi --show dmenu | while read option; do
+			echo -e "Shut Down\nRestart\nSleep\nLock\nLog Out" | wofi --show dmenu --height=272 --prompt="Power Options" | while read option; do
 	 	   case "$option" in
 	       "Shut Down") poweroff ;;
 	       "Restart") reboot ;;
