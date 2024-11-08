@@ -35,11 +35,11 @@
 			preserve_split = true;
 		};
 
-		decoration = {
-			drop_shadow = true;
-			shadow_range = 32;
-			"col.shadow" = "rgba(11111132)";
-			shadow_render_power = 2;
+		decoration.shadow = {
+			enabled = true;
+			range = 32;
+			color = "rgba(11111132)";
+			render_power = 2;
 		};
 
 		plugin = {
