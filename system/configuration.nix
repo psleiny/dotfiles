@@ -108,6 +108,7 @@ in
 		slurp
 		hyprpicker
 		wofi-emoji
+		chromium
 		(pkgs.writeShellScriptBin "powermenu" ''
 			echo -e "Shut Down\nRestart\nSleep\nLock\nLog Out" | wofi --show dmenu --height=272 --prompt="Power Options" | while read option; do
 	 	   case "$option" in

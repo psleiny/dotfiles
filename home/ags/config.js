@@ -206,6 +206,7 @@ function Percent(percent, icon) {
     name: `percent`,
     anchor: ["right"],
     child: overlay,
+    layer: "overlay",
     margins: [0, 20, 0, 0],
   });
 }
